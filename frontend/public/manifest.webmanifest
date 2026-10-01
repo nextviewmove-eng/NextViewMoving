@@ -1,0 +1,31 @@
+{
+  "name": "NextViewMove Admin",
+  "short_name": "NVM Admin",
+  "description": "NextViewMove admin workspace: leads, follow-ups, documents, and signing.",
+  "start_url": "./admin/",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "theme_color": "#0C2340",
+  "background_color": "#0C2340",
+  "icons": [
+    {
+      "src": "./icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
