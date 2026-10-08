@@ -40,7 +40,9 @@ const createLead = asyncHandler(async (req, res) => {
     quote: req.body.quote,
   });
 
-  await notifyNewLead(lead);
+  notifyNewLead(lead).catch((error) => {
+    console.error(`[email] New-lead notification FAILED: ${error.message}`);
+  });
 
   return res.status(201).json({
     success: true,
