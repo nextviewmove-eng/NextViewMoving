@@ -9,7 +9,13 @@ import { notFound, errorHandler } from './middleware/error.middleware.js';
 
 const app = express();
 
-const allowedOrigins = [process.env.CLIENT_URL, process.env.ADMIN_URL].filter(Boolean);
+const parseOrigins = (value) =>
+  (value || '')
+    .split(',')
+    .map((origin) => origin.trim().replace(/\/+$/, ''))
+    .filter(Boolean);
+
+const allowedOrigins = [...parseOrigins(process.env.CLIENT_URL), ...parseOrigins(process.env.ADMIN_URL)];
 
 app.use(helmet());
 
